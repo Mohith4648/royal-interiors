@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Collection | Royal Interiors</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* Card Styling */
+        .statue-card {
+            cursor: pointer;
+            transition: transform 0.3s;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .statue-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Image Styling */
+        .card-img-top {
+            height: 300px;
+            object-fit: cover;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        /* Labels (Size Badges) */
+        .badge-size {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 0.9rem;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+
+        /* Details Text */
+        .detail-text {
+            font-size: 0.9rem;
+            color: #555;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">ROYAL INTERIORS</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="statues.html">Statues</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="bg-light py-5 text-center">
+        <div class="container">
+            <h1 class="fw-bold">Our Divine Collection</h1>
+            <p class="text-muted">Click on any image to view it in full size.</p>
+        </div>
+    </div>
+
+    <div class="container my-5">
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card statue-card h-100" onclick="openModal(this)">
+                    <img src="holy-family-big.jpg" class="card-img-top" alt="Holy Family">
+                    <span class="badge bg-danger badge-size">BIG SIZE</span>
+                    
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Holy Family Set</h4>
+                        <hr>
+                        <p class="detail-text"><strong>Material:</strong> Reinforced Fiberglass</p>
+                        <p class="detail-text"><strong>Height:</strong> 5 Feet</p>
+                        <p class="detail-text"><strong>Features:</strong> Weather-proof paint</p>
+                        <button class="btn btn-outline-primary w-100 mt-2">View Larger</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card statue-card h-100" onclick="openModal(this)">
+                    <img src="angel-medium.jpg" class="card-img-top" alt="Angel Statue">
+                    <span class="badge bg-warning text-dark badge-size">MEDIUM</span>
+                    
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Adoring Angel</h4>
+                        <hr>
+                        <p class="detail-text"><strong>Material:</strong> Poly-Resin</p>
+                        <p class="detail-text"><strong>Height:</strong> 3 Feet</p>
+                        <p class="detail-text"><strong>Features:</strong> Hand-carved wings</p>
+                        <button class="btn btn-outline-primary w-100 mt-2">View Larger</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card statue-card h-100" onclick="openModal(this)">
+                    <img src="ave-maria.jpg" class="card-img-top" alt="Ave Maria">
+                    <span class="badge bg-info text-dark badge-size">Standard</span>
+                    
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Mother Mary (Ave Maria)</h4>
+                        <hr>
+                        <p class="detail-text"><strong>Material:</strong> Marble Dust</p>
+                        <p class="detail-text"><strong>Height:</strong> 24 Inches</p>
+                        <p class="detail-text"><strong>Features:</strong> Gold trim finish</p>
+                        <button class="btn btn-outline-primary w-100 mt-2">View Larger</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card statue-card h-100" onclick="openModal(this)">
+                    <img src="infant-jesus.jpg" class="card-img-top" alt="Infant Jesus">
+                    <span class="badge bg-success badge-size">SPECIAL</span>
+                    
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Infant Jesus</h4>
+                        <hr>
+                        <p class="detail-text"><strong>Material:</strong> Mixed Resin</p>
+                        <p class="detail-text"><strong>Height:</strong> 12 Inches</p>
+                        <p class="detail-text"><strong>Features:</strong> Realistic eyes</p>
+                        <button class="btn btn-outline-primary w-100 mt-2">View Larger</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card statue-card h-100" onclick="openModal(this)">
+                    <img src="divine-mercy.jpg" class="card-img-top" alt="Divine Mercy">
+                    <span class="badge bg-primary badge-size">SMALL</span>
+                    
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold">Divine Mercy</h4>
+                        <hr>
+                        <p class="detail-text"><strong>Material:</strong> Resin</p>
+                        <p class="detail-text"><strong>Height:</strong> 1.5 Feet</p>
+                        <p class="detail-text"><strong>Features:</strong> Fade-resistant</p>
+                        <button class="btn btn-outline-primary w-100 mt-2">View Larger</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="modal fade" id="imageModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title fw-bold" id="modalTitle">Statue Details</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center bg-dark">
+                    <img src="" id="modalImage" class="img-fluid" style="max-height: 80vh; border-radius: 5px;">
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <a href="contact.html" class="btn btn-success btn-lg px-5">Order Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // This script handles the Pop-up logic
+        var myModal = new bootstrap.Modal(document.getElementById('imageModal'));
+
+        function openModal(element) {
+            // 1. Get the image src and title from the clicked card
+            var imageSrc = element.querySelector('img').src;
+            var titleText = element.querySelector('.card-title').innerText;
+
+            // 2. Put them into the Modal (Pop-up)
+            document.getElementById('modalImage').src = imageSrc;
+            document.getElementById('modalTitle').innerText = titleText;
+
+            // 3. Show the Pop-up
+            myModal.show();
+        }
+    </script>
+</body>
+</html>
